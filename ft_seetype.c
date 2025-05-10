@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:17:21 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/10 16:35:15 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/10 17:19:17 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,25 @@ void ft_printstr(unsigned char *point, va_list param, int *count)
 
 void	ft_putnbr(unsigned char *point, va_list param, int *count)
 {
-
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
 }
+
 void	ft_seetype(unsigned char *point, va_list param, int *count)
 {
 	if (*point == 'c' || *point == '%')
