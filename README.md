@@ -1,5 +1,5 @@
 
-##CURRENT
+## CURRENT
 
 
 |	func | made | .h | makefile | tested | working |
@@ -14,13 +14,13 @@
 | %X - nbr in Hex	| X | X | X | X | X |
 | % - escape %		| X | X | X | X | X |
 
-####antes da entrega: 
+#### antes da entrega: 
 modificar o nome do ficheiro ".a"
 (libftprintf.a)
 
 
 
-##TODO
+## TODO
 organizar file tree 
 escrever as funções base 
 chegar a estado testável 
