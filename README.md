@@ -21,7 +21,7 @@ modificar o nome do ficheiro ".a"
 
 
 ## TODO
-send direct next param to function with va_arg instead of sending the whole initialized param (cleaner, and sometimes necessary, when dealing with recursive functions such as putnbr, otherwise va_list is being constantly iterated over)
+~~send direct next param to function with va_arg instead of sending the whole initialized param (cleaner, and sometimes necessary, when dealing with recursive functions such as putnbr, otherwise va_list is being constantly iterated over)~~
 
 organizar file tree 
 

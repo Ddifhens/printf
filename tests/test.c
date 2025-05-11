@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 16:46:45 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/11 11:58:00 by jormanue         ###   ########.fr       */
+/*   Created: 2025/05/11 13:08:03 by jormanue          #+#    #+#             */
+/*   Updated: 2025/05/11 14:28:26 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *s, ...)
+int	main(void)
 {
-	int				printed;
-	unsigned char	*point;
-	va_list			param;
+	//int	a;
+	char b;
+	//char *s;
 
-	printed = 0;
-	va_start(param, s);
-	point = (unsigned char *)s;
-	while (point)
-		{
-			if (*point == '%')
-			{
-				point++;
-				printed += ft_seetype(point, param);
-			}
-			else
-			{
-				ft_putchar(*point);
-				printed++;
-			}
-			point++;	
-		}
-	return (printed);
+	//a = 10;
+	b = 'A';
+	//s = "test string";
+
+	ft_printf("a character: %c\n", b);
+	//ft_printf("an interger: %i\n", a);
+	//ft_printf("a string: %s\n", s);
 }
