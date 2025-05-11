@@ -29,4 +29,4 @@ escrever as funções base
 
 chegar a estado testável 
 
-~~retirar dependência em global pointers, transicionar em vez para retornos de funções ~~
+~~retirar dependência em global pointers, transicionar em vez para retornos de funções~~
