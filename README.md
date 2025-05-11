@@ -4,7 +4,7 @@
 
 |	func | made | .h | makefile | tested | working |
 | --- | --- | --- | --- | --- | --- |
-| %c char	| prototyped | ~ | ~ | X | ? |
+| %c char	| prototyped | Y | Y | X | ? |
 | %s string	| protoyped | ~ | ~ | X | ? |
 | %p - void * hexadecimal | X | X | X | X | X |
 | %d - decimal	| X | X | X | X | X |
@@ -12,7 +12,7 @@
 | %u - unsigned decimal	| X | X | X | X | X |
 | %x - nbr in Hex	| X | X | X | X | X |
 | %X - nbr in Hex	| X | X | X | X | X |
-| % - escape %		| X | X | X | X | X |
+| % - escape %		| prototyped | Y | Y | X | ? |
 
 #### antes da entrega: 
 modificar o nome do ficheiro ".a"
@@ -29,4 +29,4 @@ escrever as funções base
 
 chegar a estado testável 
 
-retirar dependência em global pointers, transicionar em vez para retornos de funções 
+~~retirar dependência em global pointers, transicionar em vez para retornos de funções ~~

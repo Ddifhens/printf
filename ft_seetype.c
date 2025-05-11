@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:17:21 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/10 17:19:17 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/11 12:03:08 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,45 +22,32 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-void	ft_putchar(char c)
-{
-	write (1, %c, 1);
-}
-
-void ft_printchar(unsigned char *point, va_list param, int *count)
+int ft_printstr(char *s)
 {
 	int	c;
-
-	c = va_arg(param, int);
-	ft_putchar(c);
-	(*count)++;
-	point++;
-}
-
-void ft_printstr(unsigned char *point, va_list param, int *count)
-{
-	char	*s;
-
-	s = va_arg(param, char*);
+	c = 0;
 	while (s)
 	{
 		ft_putchar(*s);
-		count++;
+		c++;
 		s++;
 	}
-	point += ft_strlen(s);
+	return (c);
 }
 
-void	ft_putnbr(unsigned char *point, va_list param, int *count)
+int	ft_putnbr(int nb)
 {
+	static int	c;
+
+	c = 0;
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return ;
+		return (11);
 	}
 	if (nb < 0)
 	{
-		ft_putchar('-');
+		c += ft_putchar('-');
 		ft_putnbr(-nb);
 	}
 	else if (nb > 9)
@@ -69,26 +56,31 @@ void	ft_putnbr(unsigned char *point, va_list param, int *count)
 		ft_putnbr(nb % 10);
 	}
 	else
-		ft_putchar(nb + '0');
+		c += ft_putchar(nb + '0');
+	return (c);
 }
 
-void	ft_seetype(unsigned char *point, va_list param, int *count)
+int	ft_seetype(unsigned char *point, va_list param)
 {
+	int	printed;
+
+	printed = 0;
 	if (*point == 'c' || *point == '%')
-		ft_printchar(point, param, count);
+		printed += ft_putchar(va_arg(param, int));
 	else if (*point == 's')
-		ft_printstr(point, param, count);
+		printed += ft_printstr(va_arg(param, char*));
 	else if (*point == 'p')
 		ft_nulllhex(point, param, count);
 	else if (*point == 'd')
 		ft_printdecimal(point, param, count);
 	else if (*point == 'i')
-		ft_putnbr(point, param, count);
+		printed += ft_putnbr(va_arg(param, int));
 	else if (*point == 'u')
 		ft_printunsdec(point, param, count);
 	else if (*point == 'x')
 		ft_printhex(point,param,count, 0);
 	else if (*point == 'X')
 		ft_printhex(point, param, count, 1);
+	return (printed); 
 }
 

@@ -2,7 +2,7 @@ CC= cc
 CFLAGS= -Wall -Werror -Wextra
 NAME=libftprintf.a
 
-C_FILES= ft_printf.c ft_printchar.c ft_printstr.c
+C_FILES= ft_printf.c ft_putchar.c ft_seetype.c
 
 OBJS= $(C_FILES:.c=.o)
 
