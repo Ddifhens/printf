@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:46:45 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/11 12:12:32 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/11 15:58:01 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(char const *s, ...)
 	printed = 0;
 	va_start(param, s);
 	point = (unsigned char *)s;
-	while (point)
+	while (*point)
 		{
 			if (*point == '%')
 			{

@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:17:21 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/11 12:09:35 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/11 15:59:30 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int ft_printstr(char *s)
 {
 	int	c;
 	c = 0;
-	while (s)
+	while (*s)
 	{
 		ft_putchar(*s);
 		c++;
