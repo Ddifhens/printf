@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:17:21 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/11 15:59:30 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/11 16:36:10 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int	ft_putnbr(int nb)
 	}
 	if (nb < 0)
 	{
-		c += ft_putchar('-');
+		ft_putchar('-');
+		c++;
 		ft_putnbr(-nb);
 	}
 	else if (nb > 9)
@@ -56,7 +57,10 @@ int	ft_putnbr(int nb)
 		ft_putnbr(nb % 10);
 	}
 	else
-		c += ft_putchar(nb + '0');
+	{
+		ft_putchar(nb + '0');
+		c++;
+	}
 	return (c);
 }
 

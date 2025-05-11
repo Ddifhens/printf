@@ -6,7 +6,7 @@
 #    By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 15:29:27 by jormanue          #+#    #+#              #
-#    Updated: 2025/05/11 15:52:55 by jormanue         ###   ########.fr        #
+#    Updated: 2025/05/11 16:08:10 by jormanue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,4 +25,6 @@ echo "and they run"
 ./tests/test 
 
 make fclean
+cd tests/
+rm test
 echo "i was never here"

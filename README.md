@@ -25,8 +25,10 @@ modificar o nome do ficheiro ".a"
 
 ~~organizar file tree~~
 
-escrever as funções base 
+~~escrever as funções base~~
 
-chegar a estado testável 
+~~Chegar a estado testável~~
 
 ~~retirar dependência em global pointers, transicionar em vez para retornos de funções~~
+
+refazer a contagem expectável de retorno da função dentro do tester, para contar com caracteres fora da função
