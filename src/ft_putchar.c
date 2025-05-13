@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 11:58:54 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/11 12:02:05 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/13 17:33:30 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_putchar(char c)
 {
-	write (1, &c, 1);
-	return (1);
+	return (write (1, &c, 1));
 }

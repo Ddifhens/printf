@@ -17,7 +17,7 @@
 #### antes da entrega: 
 modificar o nome do ficheiro ".a"
 (libftprintf.a)
-
+retirar a "-g" flag do makefile 
 
 
 ## TODO

@@ -18,7 +18,7 @@ $(NAME): $(OBJS)
 	@echo "compiled library!"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
+	$(CC) -g $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
 clean:
 	@rm -f $(OBJS)

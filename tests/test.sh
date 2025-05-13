@@ -6,7 +6,7 @@
 #    By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 15:29:27 by jormanue          #+#    #+#              #
-#    Updated: 2025/05/11 16:08:10 by jormanue         ###   ########.fr        #
+#    Updated: 2025/05/13 17:42:36 by jormanue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ make re
 #test counter
 T=0
 #build tests
-cc -Wall -Werror -Wextra -Iinclude tests/test.c -L. -lftprintf -o tests/test
+cc -g -Wall -Werror -Wextra -Iinclude tests/test.c -L. -lftprintf -o tests/test
 T=$((T+1))
 
 echo "$T tests are coming for you"
@@ -26,5 +26,4 @@ echo "and they run"
 
 make fclean
 cd tests/
-rm test
 echo "i was never here"

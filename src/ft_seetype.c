@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:17:21 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/11 16:36:10 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/13 18:49:33 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int ft_printstr(char *s)
+int	ft_printstr(char *s)
 {
 	int	c;
+
 	c = 0;
 	while (*s)
 	{
@@ -37,9 +38,8 @@ int ft_printstr(char *s)
 
 int	ft_putnbr(int nb)
 {
-	static int	c;
+	static int	c = 0;
 
-	c = 0;
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
@@ -47,9 +47,8 @@ int	ft_putnbr(int nb)
 	}
 	if (nb < 0)
 	{
-		ft_putchar('-');
-		c++;
-		ft_putnbr(-nb);
+		c += (ft_putchar('-'));
+		nb *= -1;
 	}
 	else if (nb > 9)
 	{
@@ -58,8 +57,7 @@ int	ft_putnbr(int nb)
 	}
 	else
 	{
-		ft_putchar(nb + '0');
-		c++;
+		c += (ft_putchar(nb + '0'));
 	}
 	return (c);
 }
@@ -72,19 +70,8 @@ int	ft_seetype(unsigned char *point, va_list param)
 	if (*point == 'c' || *point == '%')
 		printed += ft_putchar(va_arg(param, int));
 	else if (*point == 's')
-		printed += ft_printstr(va_arg(param, char*));
-	/*else if (*point == 'p')
-		ft_nulllhex(point, param, count);
-	else if (*point == 'd')
-		ft_printdecimal(point, param, count);*/
+		printed += ft_printstr(va_arg(param, char *));
 	else if (*point == 'i')
 		printed += ft_putnbr(va_arg(param, int));
-	/*else if (*point == 'u')
-		ft_printunsdec(point, param, count);
-	else if (*point == 'x')
-		ft_printhex(point,param,count, 0);
-	else if (*point == 'X')
-		ft_printhex(point, param, count, 1);*/
-	return (printed); 
+	return (printed);
 }
-
