@@ -6,60 +6,29 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:17:21 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/13 18:49:33 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/20 20:03:45 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_puthex(unsigned int nb, int cap)
 {
-	int	i;
+	char	*table;
+	static int	p = 0;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	ft_printstr(char *s)
-{
-	int	c;
-
-	c = 0;
-	while (*s)
+	if (cap)
+		table = "0123456789ABCDEF";
+	else
+		table = "0123456789abcdef";
+	if (nb > 15)
 	{
-		ft_putchar(*s);
-		c++;
-		s++;
-	}
-	return (c);
-}
-
-int	ft_putnbr(int nb)
-{
-	static int	c = 0;
-
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return (11);
-	}
-	if (nb < 0)
-	{
-		c += (ft_putchar('-'));
-		nb *= -1;
-	}
-	else if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_puthex(nb / 16, cap);
+		ft_puthex(nb % 16, cap);
 	}
 	else
-	{
-		c += (ft_putchar(nb + '0'));
-	}
-	return (c);
+		p += (ft_putchar(table[nb]));
+	return (p);
 }
 
 int	ft_seetype(unsigned char *point, va_list param)
@@ -72,6 +41,10 @@ int	ft_seetype(unsigned char *point, va_list param)
 	else if (*point == 's')
 		printed += ft_printstr(va_arg(param, char *));
 	else if (*point == 'i')
-		printed += ft_putnbr(va_arg(param, int));
+		printed += ft_putnbr(va_arg(param, long));
+	else if (*point == 'x')
+		printed += ft_puthex(va_arg(param, unsigned int), 0);
+	else if (*point == 'X')
+		printed += ft_puthex(va_arg(param, unsigned int), 1);
 	return (printed);
 }

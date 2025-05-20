@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 16:46:45 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/20 19:09:23 by jormanue         ###   ########.fr       */
+/*   Created: 2025/05/20 17:36:15 by jormanue          #+#    #+#             */
+/*   Updated: 2025/05/20 17:36:37 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
-int	ft_printf(char const *s, ...)
+size_t	ft_strlen(const char *s)
 {
-	int				printed;
-	unsigned char	*point;
-	va_list			param;
+	int	i;
 
-	printed = 0;
-	va_start(param, s);
-	point = (unsigned char *)s;
-	while (*point)
-	{
-		if (*point == '%')
-		{
-			point++;
-			printed += (ft_seetype(point, param));
-		}
-		else
-		{
-			printed += (ft_putchar(*point));
-		}
-		point++;
-	}
-	return (printed);
-	va_end(param);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
