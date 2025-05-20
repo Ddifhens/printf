@@ -18,9 +18,12 @@
 modificar o nome do ficheiro ".a"
 (libftprintf.a)
 retirar a "-g" flag do makefile 
+remover tester da pasta
 
 
 ## TODO
+ correct 1 edge case in %i, %x functions handling of max and min values for long and int ....? 
+
 ~~send direct next param to function with va_arg instead of sending the whole initialized param (cleaner, and sometimes necessary, when dealing with recursive functions such as putnbr, otherwise va_list is being constantly iterated over)~~
 
 ~~organizar file tree~~
@@ -30,5 +33,3 @@ retirar a "-g" flag do makefile
 ~~Chegar a estado testável~~
 
 ~~retirar dependência em global pointers, transicionar em vez para retornos de funções~~
-
-refazer a contagem expectável de retorno da função dentro do tester, para contar com caracteres fora da função
