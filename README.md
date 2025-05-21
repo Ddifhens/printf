@@ -4,15 +4,15 @@
 
 |	func | made | .h | makefile | tested | working |
 | --- | --- | --- | --- | --- | --- |
-| %c char	| prototyped | Y | Y | X | ? |
-| %s string	| protoyped | ~ | ~ | X | ? |
+| %c char	| prototyped | Y | Y | Y | Y |
+| %s string	| protoyped | Y | Y | Y | Y |
 | %p - void * hexadecimal | X | X | X | X | X |
 | %d - decimal	| X | X | X | X | X |
-| %i - interger in base ten	| prototyped | X | X | X | X |
+| %i - interger in base ten	| Y | Y | Y | Y | Y |
 | %u - unsigned decimal	| X | X | X | X | X |
-| %x - nbr in Hex	| X | X | X | X | X |
-| %X - nbr in Hex	| X | X | X | X | X |
-| % - escape %		| prototyped | Y | Y | X | ? |
+| %x - nbr in Hex	| Y | Y | Y | Y | Y |
+| %X - nbr in Hex	| Y | Y | Y | Y | Y |
+| % - escape %		| Y | Y | Y | Y | Y |
 
 #### antes da entrega: 
 modificar o nome do ficheiro ".a"
@@ -22,7 +22,7 @@ remover tester da pasta
 
 
 ## TODO
- correct 1 edge case in %i, %x functions handling of max and min values for long and int ....? 
+~~correct 1 edge case in %i, %x functions handling of max and min values for long and int ....?~~
 
 ~~send direct next param to function with va_arg instead of sending the whole initialized param (cleaner, and sometimes necessary, when dealing with recursive functions such as putnbr, otherwise va_list is being constantly iterated over)~~
 

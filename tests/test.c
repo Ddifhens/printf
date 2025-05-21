@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 13:08:03 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/20 18:32:27 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/21 14:49:44 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ int	main(void)
 	printf("expect:n/a\n got:%i\n", ft_printf("hex, cap: %X\n", 100));
 	printf("expect:n/a\n got:%i\n", ft_printf("hex, no cap: %x\n", -2123));
 	printf("expect:n/a\n got:%i\n", ft_printf("hex, cap: %X\n", -2123));
+	printf("expect:n/a\n got:%i\n", ft_printf("a percent: %%\n"));
 }

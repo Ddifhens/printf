@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:46:45 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/20 19:09:23 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/21 15:41:19 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int	ft_printf(char const *s, ...)
 		}
 		point++;
 	}
-	return (printed);
 	va_end(param);
+	return (printed);
 }
