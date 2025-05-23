@@ -6,7 +6,7 @@
 #    By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 15:29:27 by jormanue          #+#    #+#              #
-#    Updated: 2025/05/13 17:42:36 by jormanue         ###   ########.fr        #
+#    Updated: 2025/05/23 17:46:38 by jormanue         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,6 @@ echo "$T tests are coming for you"
 echo "and they run"
 ./tests/test 
 
-make fclean
+#make fclean
 cd tests/
 echo "i was never here"

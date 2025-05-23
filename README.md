@@ -19,6 +19,7 @@ modificar o nome do ficheiro ".a"
 (libftprintf.a)
 retirar a "-g" flag do makefile 
 remover tester da pasta
+directories direitas
 
 
 ## TODO

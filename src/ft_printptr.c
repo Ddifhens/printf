@@ -6,7 +6,7 @@ int	ft_printptr(void *ptr)
 
 	p = 0;
 	if (!ptr)
-		return (ft_printstr("(nill)");
+		return (ft_printstr("(nil)"));
 	p += ft_printstr("0x");
 	return (p + (ft_puthex((unsigned long)ptr, 0)));
 }

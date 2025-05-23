@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 13:08:03 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/23 17:42:17 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/23 17:40:16 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,10 @@ int	main(void)
 	i = &b;
 	p = &d;
 		
-	printf("NULL for %%p:\n");
-	int	k = printf("Og -> %p\n", NULL);
-	printf("len Og: %d", k);
+int	k = printf("NULL for %%p:\nOg -> %p\n", NULL);
+	printf("\n len Og: %d", k);
 	k = ft_printf("ft -> %p\n", NULL);
-	printf("len ft: %d", k);
+	printf("\n len ft: %d", k);
 	printf("INT_MAX hex:\nOg -> %x\n", INT_MAX);
 	ft_printf("ft -> %x\n", INT_MAX);
 	printf("expect:15\ngot:%i\n", ft_printf("a character: %c\n", 'a'));

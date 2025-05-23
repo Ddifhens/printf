@@ -6,7 +6,7 @@
 /*   By: jormanue <jormanue@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:17:21 by jormanue          #+#    #+#             */
-/*   Updated: 2025/05/21 15:50:05 by jormanue         ###   ########.fr       */
+/*   Updated: 2025/05/23 17:56:28 by jormanue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	ft_seetype(unsigned char *point, va_list param)
 		printed += ft_printstr(va_arg(param, char *));
 	else if (*point == 'p')
 		printed += ft_printptr(va_arg(param, void *));
-	else if (*point == 'i')
+	else if (*point == 'u')
+		printed += ft_putunbr(va_arg(param, unsigned int));
+	else if (*point == 'i' || *point == 'd')
 		printed += ft_putnbr(va_arg(param, int));
 	else if (*point == 'x')
 		printed += ft_puthex(va_arg(param, unsigned int), 0);

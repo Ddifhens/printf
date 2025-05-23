@@ -2,7 +2,7 @@ CC= cc
 CFLAGS= -Wall -Werror -Wextra
 NAME=libftprintf.a
 
-C_FILES= ft_printf ft_putchar ft_seetype ft_printstr ft_putnbr ft_strlen ft_printptr ft_puthex
+C_FILES= ft_printf ft_putchar ft_seetype ft_printstr ft_putnbr ft_strlen ft_printptr ft_puthex ft_putunbr
 
 SRC_DIR=src/
 INC_DIR=include/
