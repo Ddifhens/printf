@@ -2,17 +2,17 @@
 ## CURRENT
 
 
-|	func | made | .h | makefile | tested | working |
-| --- | --- | --- | --- | --- | --- |
-| %c char	| Y | Y | Y | Y | Y |
-| %s string	| Y | Y | Y | Y | Y |
-| %p - void * | Y | Y | Y | Y | ~ |
-| %d - decimal	| X | X | X | X | X |
-| %i - interger in base ten	| Y | Y | Y | Y | Y |
-| %u - unsigned decimal	| X | X | X | X | X |
-| %x - nbr in Hex	| Y | Y | Y | Y | Y |
-| %X - nbr in Hex	| Y | Y | Y | Y | Y |
-| % - escape %		| Y | Y | Y | Y | Y |
+|	func | made | .h | makefile | tested | working | norm |
+| --- | --- | --- | --- | --- | --- |---| 
+| %c char	| Y | Y | Y | Y | Y | N |
+| %s string	| Y | Y | Y | Y | Y | N |
+| %p - void * | Y | Y | Y | Y | ~ | N |
+| %d - decimal	| X | X | X | X | X | N |
+| %i - interger in base ten	| Y | Y | Y | Y | Y | N |
+| %u - unsigned decimal	| X | X | X | X | X | N |
+| %x - nbr in Hex	| Y | Y | Y | Y | Y | N |
+| %X - nbr in Hex	| Y | Y | Y | Y | Y | N |
+| % - escape %		| Y | Y | Y | Y | Y | N |
 
 #### antes da entrega: 
 modificar o nome do ficheiro ".a"
