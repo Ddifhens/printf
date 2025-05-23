@@ -1,6 +1,6 @@
 #include "ft_printf.h" 
 
-int	ft_puthex(unsigned int nb, int cap)
+int	ft_puthex(unsigned long nb, int cap)
 {
 	char	*table;
 	int	p = 0;

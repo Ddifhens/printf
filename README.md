@@ -4,9 +4,9 @@
 
 |	func | made | .h | makefile | tested | working |
 | --- | --- | --- | --- | --- | --- |
-| %c char	| prototyped | Y | Y | Y | Y |
-| %s string	| protoyped | Y | Y | Y | Y |
-| %p - void * hexadecimal | X | X | X | X | X |
+| %c char	| Y | Y | Y | Y | Y |
+| %s string	| Y | Y | Y | Y | Y |
+| %p - void * | Y | Y | Y | Y | ~ |
 | %d - decimal	| X | X | X | X | X |
 | %i - interger in base ten	| Y | Y | Y | Y | Y |
 | %u - unsigned decimal	| X | X | X | X | X |
