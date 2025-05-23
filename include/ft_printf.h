@@ -21,5 +21,7 @@ int		ft_printstr(char *s);
 size_t	ft_strlen(const char *s);
 int		ft_putnbr(long nb);
 int		ft_seetype(unsigned char *point, va_list param);
+int		ft_puthex(unsigned int nb, int cap);
+int		ft_printptr(void *ptr);
 
 #endif

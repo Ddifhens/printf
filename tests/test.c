@@ -16,6 +16,20 @@
 
 int	main(void)
 {
+	char	*c;
+	int	*i;
+	unsigned char	*p;
+	char	a;
+	int	b;
+	unsigned char	d;
+
+	a = 'b';
+	b = 12356;
+	d = 150;
+	c= &a;
+	i = &b;
+	p = &d;
+		
 	printf("expect:15\ngot:%i\n", ft_printf("a character: %c\n", 'a'));
 	printf("expect:15\ngot:%i\n", ft_printf("a character: %c\n", 'B'));
 	printf("expect:16\ngot:%i\n", ft_printf("an interger: %i\n", 10));
@@ -35,4 +49,5 @@ int	main(void)
 	printf("expect:n/a\n got:%i\n", ft_printf("hex, no cap: %x\n", -2123));
 	printf("expect:n/a\n got:%i\n", ft_printf("hex, cap: %X\n", -2123));
 	printf("expect:n/a\n got:%i\n", ft_printf("a percent: %%\n"));
+	ft_printf("pointer test: %p\n%p\n%p\n", c, i, p);
 }
